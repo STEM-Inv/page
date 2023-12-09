@@ -79,7 +79,7 @@
                     Dongxu Yue<sup>3</sup><sup></sup>,</
                   </span>  
                    <span class="author-block">
-                    <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=t4et8FEAAAAJ" target="_blank">Zhihui Lin<sup></sup></a><sup></sup>,</
+                    <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=t4et8FEAAAAJ" target="_blank">Zhihui Lin<sup>4</sup></a><sup></sup>,</
                   </span>   
                    <span class="author-block">
                     <a href="https://scholar.google.com/citations?user=7Hdu5k4AAAAJ&hl=zh-CN" target="_blank">Dong Xu<sup>1</sup></a>
@@ -88,9 +88,12 @@
 
                   <div class="is-size-5 publication-authors">
                     <span class="author-block"><sup>1</sup>The University of HongKong
+                    &nbsp;&nbsp;
                     <sup>2</sup>International Digital Economy Academy (IDEA)
+                    <br>
                     <sup>3</sup>Peking University
-
+                    &nbsp;&nbsp;
+                    <sup>4</sup>Tsinghua University
                     <!--<br>Conferance name and year</span>-->
                     <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
                   </div>
@@ -199,7 +202,7 @@
         <!-- Your image here -->
         <img src="static/images/STEM_DDIM_inv.png" alt="MY ALT TEXT"/>
         </p> 
-          Fig1: The illustration of the proposed STEM inversion. We estimate a more compact representation (bases $\mu$) for the input video via the EM algorithm. The ST-E step and ST-M step are executed alternately for R times until convergence. The Self-attention (SA) in our STEM inversion are denoted as STEM-SA, where the $\rm{Key}$ and $\rm{Value}$ embeddings are derieved by projections of the converged $\mu$.
+          The illustration of the proposed STEM inversion. We estimate a more compact representation (bases $\mu$) for the input video via the EM algorithm. The ST-E step and ST-M step are executed alternately for R times until convergence. The Self-attention (SA) in our STEM inversion are denoted as STEM-SA, where the $\rm{Key}$ and $\rm{Value}$ embeddings are derieved by projections of the converged $\mu$.
         </p>
       </div>
         </div>
@@ -284,6 +287,26 @@
 
 
 
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Feature visualization</h2>
+        <div class="content has-text-justified">
+           <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/http-1.png" alt="MY ALT TEXT"/>
+        </p> 
+          Left: we first estimate the optical flow of the input sequence. Then, we apply PCA on the output features of the last SA layer from the UNet decoder. The 4-th column shows the feature visualization when we use optical flow to warp the former-frame features. Last, we give the cosine similarity of the warped features and the target ones. Here, the brighter, the better.
+          Right: we provide the mean cosine similarity across different time steps. The higher similarity
+indicates that our STEM inversion can achieve better temporal consistency from the perspective of optical flow.
+        </p>
+      </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
 
 
 <!--BibTex citation -->
@@ -358,4 +381,3 @@
 
   </body>
   </html>
-
